@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "description": "my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TooxPL/portfolio.git"
+  },
+  "author": "Kamil Sohlich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TooxPL/portfolio/issues"
+  },
+  "homepage": "https://github.com/TooxPL/portfolio#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
