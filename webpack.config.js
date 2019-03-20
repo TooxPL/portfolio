@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const path    = require('path');
 
-const live_reload_plugin   = require('webpack-livereload-plugin');
-
 const clean_webpack_plugin    = require('clean-webpack-plugin');
 const html_webpack_plugin     = require('html-webpack-plugin');
 const mini_css_extract_plugin = require('mini-css-extract-plugin');
@@ -56,10 +54,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        loader: "babel-loader"
       },
       {
           test: /\.scss$/,
@@ -127,7 +122,6 @@ module.exports = {
   },
   plugins: [
     new vue_loader_plugin(),
-    new live_reload_plugin(),
     new html_webpack_plugin({
       template: './src/index.html',
       filename: './index.html',
