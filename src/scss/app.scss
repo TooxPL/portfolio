@@ -1,0 +1,207 @@
+/*──────────────────────────────────────────────────
+  ─ import palette normal light
+──────────────────────────────────────────────────*/
+@import './palette/normal/light';
+
+
+#app {
+  height: 100vh;
+
+
+  /*──────────────────────────────────────────────────
+    ─ nav
+  ──────────────────────────────────────────────────*/
+  nav {
+    position: absolute;
+
+    width : 100%;
+
+    top : 5rem;
+    left: 0;
+    
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    z-index: 999999;
+
+
+    /*──────────────────────────────────────────────────
+      ─ nav ul
+    ──────────────────────────────────────────────────*/
+    ul {
+      width: 100%;
+      
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+    }
+
+
+    /*──────────────────────────────────────────────────
+      ─ nav a
+    ──────────────────────────────────────────────────*/
+    a {
+      color: rgba($color: $pal_main, $alpha: .7);
+
+      font-weight: 100;
+      font-size  : 1.6rem;
+
+      padding: 1rem 1.4rem;
+
+      transition: font-weight .1s ease-out;
+    }
+
+    .router-link-exact-active {
+      font-weight: 400;
+
+      svg {
+        opacity: 1;
+
+        transform: scale(1.1);
+      }
+    }
+
+
+    /*──────────────────────────────────────────────────
+      ─ nav logo
+    ──────────────────────────────────────────────────*/
+    svg {
+      width : 6rem;
+      height: 6rem;
+
+      opacity: .7;
+
+      transition: transform .1s ease-in, opacity .1s ease-in;
+    }
+  }
+
+
+  animation: .7s ease-out 0s 1 load_animation;
+  -webkit-animation: .7s ease-out 0s 1 load_animation;
+}
+
+
+/*──────────────────────────────────────────────────
+  ─ Fade animation
+──────────────────────────────────────────────────*/
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration       : .3s;
+  transition-property       : height, opacity, transform;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  
+  overflow: hidden;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+  
+  transform: scale(1.1);
+}
+
+
+/*──────────────────────────────────────────────────
+  ─ Load animation
+──────────────────────────────────────────────────*/
+@keyframes load_animation {
+  from {
+    opacity: 0;
+    
+    transform: scale(1.1);
+  } to {
+    opacity: 1;
+    
+    transform: scale(1);
+  }
+}
+
+
+
+
+/*──────────────────────────────────────────────────
+  ─ Tablet
+──────────────────────────────────────────────────*/
+@media only screen and (min-width: 768px) {
+  #app {
+    /*──────────────────────────────────────────────────
+      ─ Tablet nav
+    ──────────────────────────────────────────────────*/
+    nav {
+      top : 7rem;
+      left: 50%;
+    
+      margin-right: -50%;
+    
+      transform: translate(-50%, 0);
+
+
+      /*──────────────────────────────────────────────────
+        ─ Tablet nav a
+      ──────────────────────────────────────────────────*/
+      a { font-size: 1.8rem; }
+  
+  
+      /*──────────────────────────────────────────────────
+        ─ Tablet nav logo
+      ──────────────────────────────────────────────────*/
+      svg {
+        width : 7rem;
+        height: 7rem;
+      }
+    }
+  }
+}
+
+
+
+
+/*──────────────────────────────────────────────────
+  ─ Desktop
+──────────────────────────────────────────────────*/
+@media only screen and (min-width: 1200px) {
+  #app {
+    /*──────────────────────────────────────────────────
+      ─ Tablet nav
+    ──────────────────────────────────────────────────*/
+    nav {
+      max-width: 180rem;
+
+      top: 12rem;
+
+      padding: 0 10rem;
+
+      align-items: flex-end;
+
+
+      /*──────────────────────────────────────────────────
+        ─ Tablet nav ul
+      ──────────────────────────────────────────────────*/
+      ul { justify-content: flex-end; }
+
+
+      /*──────────────────────────────────────────────────
+        ─ Tablet nav a
+      ──────────────────────────────────────────────────*/
+      a { font-size: 2.2rem; }
+  
+  
+      /*──────────────────────────────────────────────────
+        ─ Tablet nav logo
+      ──────────────────────────────────────────────────*/
+      svg {
+        width : 5rem;
+        height: 5rem;
+
+        margin-left: 10rem;
+      }
+
+      li:nth-child(2) {
+        position: absolute;
+
+        left: 0;
+      }
+    }
+  }
+}

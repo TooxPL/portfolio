@@ -1,0 +1,109 @@
+/*──────────────────────────────────────────────────
+  ─ import get_font
+──────────────────────────────────────────────────*/
+@import './get_font.scss';
+
+
+/*──────────────────────────────────────────────────
+  ─ import palette normal light
+──────────────────────────────────────────────────*/
+@import './palette/normal/light';
+
+
+
+
+/*──────────────────────────────────────────────────
+  ─ Main settings
+──────────────────────────────────────────────────*/
+*, *::before, *::after {
+  content: '';
+
+  box-sizing: border-box;
+
+  cursor: default;
+}
+
+body, html {
+  padding: 0;
+  margin : 0;
+  
+  font-size: 10px;
+}
+
+
+/*──────────────────────────────────────────────────
+  ─ body
+──────────────────────────────────────────────────*/
+body {
+  min-width : 100%;
+  min-height: 100vh;
+
+
+  /*──────────────────────────────────────────────────
+    ─ body background
+  ──────────────────────────────────────────────────*/
+  background-image: linear-gradient(to bottom right, #111111, #212121, #111111);
+
+  &::before,
+  &::after {
+    position: fixed;
+
+    width : 100%;
+    height: 100%;
+
+    top : 0;
+    left: 0;
+
+    z-index: -1;
+  }
+
+  &::before { background-image: linear-gradient(to bottom right, #111111, #212121, #111111); }
+
+  &::after {
+    background-image: linear-gradient(to top right, #880E4F, #4A148C);
+
+    opacity: .15;
+  }
+
+
+  /*──────────────────────────────────────────────────
+    ─ body font
+  ──────────────────────────────────────────────────*/
+  font-family            : 'Roboto', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-weight: 400;
+
+  color: $pal_main;
+
+
+  /*──────────────────────────────────────────────────
+    ─ body a
+  ──────────────────────────────────────────────────*/
+  a, a * {
+    text-decoration: none;
+
+    cursor: pointer;
+  }
+
+
+  /*──────────────────────────────────────────────────
+    ─ body h*
+  ──────────────────────────────────────────────────*/
+  h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin : 0;
+  }
+
+
+  /*──────────────────────────────────────────────────
+    ─ body ul | li | ol
+  ──────────────────────────────────────────────────*/
+  ul, li, ol {
+    list-style: none;
+
+    padding: 0;
+    margin : 0;
+  }
+}

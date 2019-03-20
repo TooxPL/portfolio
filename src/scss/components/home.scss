@@ -1,0 +1,257 @@
+/*──────────────────────────────────────────────────
+  ─ import palette normal light
+──────────────────────────────────────────────────*/
+@import './../palette/normal/light';
+
+
+/*──────────────────────────────────────────────────
+  ─ background_logo
+──────────────────────────────────────────────────*/
+#background_logo {
+  position: absolute;
+
+  width : 25rem;
+  height: 25rem;
+
+  top : 50%;
+  left: 50%;
+
+  margin-right: -50%;
+
+  transform: translate(-50%, -50%);
+
+  opacity: .25;
+
+  z-index: 0;
+}
+
+
+/*──────────────────────────────────────────────────
+  ─ header || center panel
+──────────────────────────────────────────────────*/
+header {
+  position: absolute;
+
+  top : 50%;
+  left: 50%;
+
+  margin-right: -50%;
+
+  transform: translate(-50%, -50%);
+
+
+  /*──────────────────────────────────────────────────
+    ─ header span
+  ──────────────────────────────────────────────────*/
+  span {
+    font-size: 1.4rem;
+
+    opacity: .5;
+
+    &:last-child { float: right; }
+  }
+
+
+  /*──────────────────────────────────────────────────
+    ─ header h1
+  ──────────────────────────────────────────────────*/
+  h1 {
+    font-weight: 100;
+    font-size  : 6rem;
+
+
+    /*──────────────────────────────────────────────────
+      ─ header h1 p
+    ──────────────────────────────────────────────────*/
+    p { color: $pal_website; }
+  }
+}
+
+
+/*──────────────────────────────────────────────────
+  ─ work button || bottom button
+──────────────────────────────────────────────────*/
+#work_button {
+  position: absolute;
+
+  bottom: 2rem;
+  left  : 50%;
+
+  margin-right: -50%;
+
+  transform: translate(-50%, 0);
+
+
+  /*──────────────────────────────────────────────────
+    ─ work button span || bottom button span
+  ──────────────────────────────────────────────────*/
+  span {
+    display   : block;
+    text-align: center;
+
+    cursor: pointer;
+
+    &:first-child {
+      color: $pal_website;
+
+      font-size: 1.6rem;
+    }
+
+    &:last-child {
+      color: $pal_website_secondary;
+
+      font-weight: 900;
+      font-size  : 2rem;
+    }
+  }
+}
+
+  
+/*──────────────────────────────────────────────────
+  ─ bottom info || bottom text
+──────────────────────────────────────────────────*/
+#bottom_info {
+  display: none;
+}
+
+
+
+
+/*──────────────────────────────────────────────────
+  ─ Tablet
+──────────────────────────────────────────────────*/
+@media only screen and (min-width: 768px) {
+  /*──────────────────────────────────────────────────
+    ─ Tablet background_logo
+  ──────────────────────────────────────────────────*/
+  #background_logo {
+    width : 50rem;
+    height: 50rem;
+  }
+
+
+  /*──────────────────────────────────────────────────
+    ─ Tablet header || Tablet center panel
+  ──────────────────────────────────────────────────*/
+  header {
+    /*──────────────────────────────────────────────────
+      ─ Tablet header span
+    ──────────────────────────────────────────────────*/
+    span { font-size: 1.6rem; }
+
+    /*──────────────────────────────────────────────────
+      ─ Tablet header h1
+    ──────────────────────────────────────────────────*/
+    h1 {
+      font-size: 8rem;
+    }
+  }
+
+
+  /*──────────────────────────────────────────────────
+    ─ Tablet work button || Tablet bottom button
+  ──────────────────────────────────────────────────*/
+  #work_button {
+    /*──────────────────────────────────────────────────
+      ─ Tablet work button span || Tablet bottom button span
+    ──────────────────────────────────────────────────*/
+    span {
+      &:first-child { font-size: 1.8rem; }
+      &:last-child  { font-size: 2rem;   }
+    }
+  }
+}
+
+
+
+
+/*──────────────────────────────────────────────────
+  ─ Desktop
+──────────────────────────────────────────────────*/
+@media only screen and (min-width: 1200px) {
+  /*──────────────────────────────────────────────────
+    ─ Desktop background_logo
+  ──────────────────────────────────────────────────*/
+  #background_logo {
+    width : 53rem;
+    height: 53rem;
+  }
+
+
+  /*──────────────────────────────────────────────────
+    ─ Desktop header || Desktop center panel
+  ──────────────────────────────────────────────────*/
+  header {
+    /*──────────────────────────────────────────────────
+      ─ Desktop header span
+    ──────────────────────────────────────────────────*/
+    span { font-size: 2.2rem; margin: 0 16%; }
+
+
+    /*──────────────────────────────────────────────────
+      ─ Desktop header h1
+    ──────────────────────────────────────────────────*/
+    h1 {
+      font-size: 10.2rem;
+
+
+      /*──────────────────────────────────────────────────
+        ─ header h1 p
+      ──────────────────────────────────────────────────*/
+      p { display: inline-block; }
+    }
+  }
+
+
+  /*──────────────────────────────────────────────────
+    ─ Desktop work button || Desktop bottom button
+  ──────────────────────────────────────────────────*/
+  #work_button {
+    /*──────────────────────────────────────────────────
+      ─ Desktop work button span || Desktop bottom button span
+    ──────────────────────────────────────────────────*/
+    span {
+      &:first-child { font-size: 2.2rem; }
+      &:last-child  { font-size: 2.5rem;   }
+    }
+  }
+
+
+  /*──────────────────────────────────────────────────
+    ─ Desktop bottom info || Desktop bottom text
+  ──────────────────────────────────────────────────*/
+  #bottom_info {
+    position: absolute;
+
+    width    : 100%;
+    max-width: 180rem;
+
+    padding: 0 10rem;
+
+    left  : 50%;
+    bottom: 4.5rem;
+  
+    margin-right: -50%;
+
+    font-size  : 1.6rem;
+    font-weight: 100;
+
+    opacity: .5;
+
+    display: flex;
+
+    transform: translate(-50%, 0);
+
+
+    /*──────────────────────────────────────────────────
+      ─ Desktop bottom info span || Desktop bottom text span
+    ──────────────────────────────────────────────────*/
+    span {
+      width: 100%;
+
+      &:last-child { text-align: right; }
+
+      span { color: $pal_website; }
+    }
+  }
+}
