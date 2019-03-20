@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path    = require('path');
 
+const live_reload_plugin   = require('webpack-livereload-plugin');
+
 const clean_webpack_plugin    = require('clean-webpack-plugin');
 const html_webpack_plugin     = require('html-webpack-plugin');
 const mini_css_extract_plugin = require('mini-css-extract-plugin');
@@ -28,7 +30,7 @@ module.exports = {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/'
+    publicPath: './'
   },
   module: {
     rules: [
@@ -54,7 +56,10 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader'
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
       },
       {
           test: /\.scss$/,
@@ -113,7 +118,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js', '.vue', '.json' ],
+    extensions: [ '*', '.tsx', '.ts', '.js', '.vue', '.json', 'jsx' ],
     alias: {
       '@': path.resolve('src'),
       jquery: "jquery/src/jquery",
@@ -122,8 +127,11 @@ module.exports = {
   },
   plugins: [
     new vue_loader_plugin(),
+    new live_reload_plugin(),
     new html_webpack_plugin({
       template: './src/index.html',
+      filename: './index.html',
+      excludeChunks: [ 'server' ],
       meta: my_meta
     }),
     new compression_plugin({

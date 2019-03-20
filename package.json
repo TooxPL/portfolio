@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode development",
-    "start": "node ./server.js"
+    "start": "node ./dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,16 @@
   "dependencies": {
     "express": "^4.16.4"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/preset-react": "^7.0.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
     "babel-preset-env": "^1.7.0",
@@ -51,6 +58,7 @@
     "vue-ts-loader": "0.0.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
+    "webpack-livereload-plugin": "^2.2.0",
     "webpack-node-externals": "^1.7.2"
   }
 }
