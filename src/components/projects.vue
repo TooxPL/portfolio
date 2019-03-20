@@ -29,7 +29,7 @@
 </template>
 
 <script>
-    import css_projects from '@/scss/components/projects.scss';
+    import scss_projects from '@/scss/components/projects.scss';
 
     export default {
         name: 'projects',

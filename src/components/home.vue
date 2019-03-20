@@ -40,7 +40,7 @@
   /*──────────────────────────────────────────────────
     ─ import scss
   ──────────────────────────────────────────────────*/
-  import css_home from '@/scss/components/home.scss';
+  import scss_home from '@/scss/components/home.scss';
 
 
   /*──────────────────────────────────────────────────

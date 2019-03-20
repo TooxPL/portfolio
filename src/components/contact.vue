@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import css_projects from '@/scss/components/contact.scss';
+    import scss_contact from '@/scss/components/contact.scss';
 
     export default {
         name: 'contact',

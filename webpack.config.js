@@ -54,7 +54,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: "babel-loader"
+        loader: 'babel-loader'
       },
       {
           test: /\.scss$/,
@@ -124,8 +124,6 @@ module.exports = {
     new vue_loader_plugin(),
     new html_webpack_plugin({
       template: './src/index.html',
-      filename: './index.html',
-      excludeChunks: [ 'server' ],
       meta: my_meta
     }),
     new compression_plugin({
