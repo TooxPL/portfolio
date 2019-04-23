@@ -4,7 +4,6 @@
   "description": "my portfolio",
   "private": true,
   "scripts": {
-    
     "start": "node ./dist/server.js"
   },
   "repository": {
